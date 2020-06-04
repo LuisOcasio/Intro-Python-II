@@ -56,17 +56,15 @@ print(f"Welcome {player.name}")
 #
 # If the user enters "q", quit the game.
 
-# while True:
-#     print(player.current_room.name)
-#     print('')
-#     print(player.current_room.description)
-#     cmd = input('\n~> ')
-#     if cmd == 'q':
-#         print('later')
-#         exit(0)
-#     elif cmd == 'n':
-#         elif cmd == 's':
-#             elif cmd == 'e':
-#                 elif cmd == 'w':
-#     else:
-#         print('I did not understand that command')
+while True:
+    print(player.current_room.name)
+    print('')
+    print(player.current_room.description)
+    cmd = input('\n~> ')
+    if cmd == 'q':
+        print('later!')
+        exit(0)
+    elif cmd == 'n' or cmd == 's' or cmd == 'e' or cmd == 'w':
+        player.movePlayer(cmd)
+    else:
+        print('Please refer to cardinal directions.')
